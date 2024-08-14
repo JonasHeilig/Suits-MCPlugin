@@ -1,5 +1,6 @@
 package de.jonasheilig.suits.items
 
+import org.bukkit.ChatColor
 import org.bukkit.Color
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
@@ -19,14 +20,14 @@ class IronmanHelmet {
         val helmet = ItemStack(Material.LEATHER_HELMET)
         val meta: LeatherArmorMeta = helmet.itemMeta as LeatherArmorMeta
 
-        meta.setDisplayName("Ironman Helmet")
+        meta.setDisplayName("${ChatColor.GOLD}Ironman Helmet")
         meta.isUnbreakable = true
 
         val lore = listOf(
-            "In Combination with the Ironman Chestplate:",
-            "Player Visibility",
-            "Player Holograms(What is this?)",
-            "Set Bonus: Enhanced Abilities"
+            "${ChatColor.DARK_BLUE}In Combination with the Ironman Chestplate:",
+            "${ChatColor.BLUE}Player Visibility",
+            "${ChatColor.BLUE}Player Holograms(What is this?)",
+            "${ChatColor.GOLD}Set Bonus: Enhanced Abilities"
         )
         meta.lore = lore
         meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE)

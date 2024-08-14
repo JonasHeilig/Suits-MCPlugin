@@ -1,5 +1,6 @@
 package de.jonasheilig.suits.items
 
+import org.bukkit.ChatColor
 import org.bukkit.Color
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
@@ -19,15 +20,15 @@ class IronmanBoots {
         val boots = ItemStack(Material.LEATHER_BOOTS)
         val meta: LeatherArmorMeta = boots.itemMeta as LeatherArmorMeta
 
-        meta.setDisplayName("Ironman Boots")
+        meta.setDisplayName("${ChatColor.GOLD}Ironman Boots")
         meta.isUnbreakable = true
         meta.setColor(Color.RED)
 
         val lore = listOf(
-            "In Combination with the Ironman Chestplate:",
-            "Jump Boost",
-            "Allow Flight",
-            "Set Bonus: Enhanced Abilities"
+            "${ChatColor.DARK_BLUE}In Combination with the Ironman Chestplate:",
+            "${ChatColor.BLUE}Jump Boost",
+            "${ChatColor.BLUE}Allow Flight",
+            "${ChatColor.GOLD}Set Bonus: Enhanced Abilities"
         )
         meta.lore = lore
         meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE)

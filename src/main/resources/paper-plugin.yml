@@ -2,3 +2,8 @@ name: Suits
 version: '1.0-SNAPSHOT'
 main: de.jonasheilig.suits.Suits
 api-version: '1.21'
+commands:
+  get:
+    description: "Gives a specified Ironman armor item to a player."
+    usage: "/get <playername> <item>"
+    permission: "suitsplugin.get"
