@@ -1,0 +1,4 @@
+name: Suits
+version: '1.0-SNAPSHOT'
+main: de.jonasheilig.suits.Suits
+api-version: '1.21'
