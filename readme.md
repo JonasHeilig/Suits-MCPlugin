@@ -37,7 +37,10 @@ ADDPicture
 - ARK Reaktor
 - Jarvis
 - EXO
+- JetEngineCore
 - JetEngine
+
+## Weapons:
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin

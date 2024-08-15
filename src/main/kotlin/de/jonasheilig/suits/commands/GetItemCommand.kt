@@ -43,7 +43,8 @@ class GetItemCommand : CommandExecutor {
             "ark_reactor" -> ARKReaktor().create()
             "jarvis" -> JARVIS().create()
             "exo_stick" -> EXO().create()
-            "jet_engine_core" -> JetEngine().create()
+            "jet_engine_core" -> JetEngineCore().create()
+            "jet_engine" -> JetEngine().create()
             else -> {
                 sender.sendMessage("${ChatColor.RED}Invalid item type.")
                 return true

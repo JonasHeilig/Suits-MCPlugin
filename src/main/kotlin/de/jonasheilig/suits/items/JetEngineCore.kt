@@ -10,17 +10,17 @@ import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.persistence.PersistentDataType
 import java.util.UUID
 
-class JetEngine {
+class JetEngineCore {
     fun create(): ItemStack {
-        val emerald = ItemStack(Material.DIAMOND)
+        val emerald = ItemStack(Material.EMERALD)
         val meta: ItemMeta = emerald.itemMeta
 
-        meta.displayName(Component.text("Jet Engine", NamedTextColor.GREEN))
+        meta.displayName(Component.text("Jet Engine Core", NamedTextColor.GREEN))
 
         meta.isUnbreakable = true
 
         val lore = listOf(
-            Component.text("Part for the JetEngineCore", NamedTextColor.GOLD),
+            Component.text("JetEngineCore control JetEngine", NamedTextColor.GOLD),
             Component.text("Used to make the Ironman Boots", NamedTextColor.GREEN),
         )
         meta.lore(lore)
@@ -28,7 +28,7 @@ class JetEngine {
         meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE)
         meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES)
 
-        val key = NamespacedKey.fromString("jet_engine")!!
+        val key = NamespacedKey.fromString("jet_engine_core")!!
         meta.persistentDataContainer.set(key, PersistentDataType.STRING, UUID.randomUUID().toString())
 
         emerald.itemMeta = meta
