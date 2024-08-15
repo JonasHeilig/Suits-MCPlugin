@@ -1,6 +1,7 @@
 package de.jonasheilig.suits.items
 
-import org.bukkit.ChatColor
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.Color
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
@@ -20,18 +21,18 @@ class IronmanHelmet {
         val helmet = ItemStack(Material.LEATHER_HELMET)
         val meta: LeatherArmorMeta = helmet.itemMeta as LeatherArmorMeta
 
-        meta.setDisplayName("${ChatColor.GOLD}Ironman Helmet")
+        meta.displayName(Component.text("Ironman Helmet", NamedTextColor.GOLD))
         meta.isUnbreakable = true
+        meta.setColor(Color.RED)
 
         val lore = listOf(
-            "${ChatColor.DARK_BLUE}In Combination with the Ironman Chestplate:",
-            "${ChatColor.BLUE}Player Visibility",
-            "${ChatColor.BLUE}Player Holograms(What is this?)",
-            "${ChatColor.GOLD}Set Bonus: Enhanced Abilities"
+            Component.text("In Combination with the Ironman Chestplate:", NamedTextColor.DARK_BLUE),
+            Component.text("Player Visibility", NamedTextColor.BLUE),
+            Component.text("Player Holograms (What is this?)", NamedTextColor.BLUE),
+            Component.text("Set Bonus: Enhanced Abilities", NamedTextColor.GOLD)
         )
-        meta.lore = lore
+        meta.lore(lore)
         meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE)
-        meta.setColor(Color.RED)
 
         val key = NamespacedKey.fromString("ironman_helmet")!!
         meta.persistentDataContainer.set(key, PersistentDataType.STRING, UUID.randomUUID().toString())

@@ -27,6 +27,8 @@ class GetItemCommandCompleter : TabCompleter {
                 "ironman_chestplate",
                 "ironman_leggings",
                 "ironman_boots",
+                "ironman_ark_reactor",
+                "ironman_jarvis",
                 )
             return items.filter { it.startsWith(args[1], true) }
         }
