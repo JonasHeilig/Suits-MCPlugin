@@ -3,6 +3,7 @@ package de.jonasheilig.suits
 import org.bukkit.plugin.java.JavaPlugin
 import de.jonasheilig.suits.listeners.*
 import de.jonasheilig.suits.commands.*
+import de.jonasheilig.suits.recipes.*
 
 class Suits : JavaPlugin() {
 
@@ -14,6 +15,7 @@ class Suits : JavaPlugin() {
         server.getPluginCommand("get")?.setExecutor(GetItemCommand())
         this.getCommand("get")?.tabCompleter = GetItemCommandCompleter()
         // Recipes
+        CustomRecipeManager.registerRecipes(this)
     }
 
     override fun onDisable() {
