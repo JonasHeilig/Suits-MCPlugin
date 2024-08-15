@@ -12,8 +12,8 @@ class Suits : JavaPlugin() {
         // Listeners
         server.pluginManager.registerEvents(IronSuitListener(this), this)
         // Commands
-        server.getPluginCommand("get")?.setExecutor(GetItemCommand())
-        this.getCommand("get")?.tabCompleter = GetItemCommandCompleter()
+        getCommand("get")?.setExecutor(GetItemCommand())
+        getCommand("get")?.tabCompleter = GetItemCommandCompleter()
         // Recipes
         CustomRecipeManager.registerRecipes(this)
     }

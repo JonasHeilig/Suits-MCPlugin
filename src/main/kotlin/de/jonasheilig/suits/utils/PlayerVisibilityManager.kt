@@ -1,5 +1,7 @@
 package de.jonasheilig.suits.utils
 
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer
 import org.bukkit.Bukkit
 import org.bukkit.entity.ArmorStand
 import org.bukkit.entity.Player
@@ -12,6 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin
 object PlayerVisibilityManager {
 
     private val hologramKey = NamespacedKey("suitsplugin", "hologram")
+    private val ironmanHelmetTagKey = NamespacedKey("suitsplugin", "ironman_helmet")
 
     fun showPlayerHolograms(viewer: Player, plugin: JavaPlugin) {
         Bukkit.getOnlinePlayers().forEach { target ->
@@ -22,9 +25,9 @@ object PlayerVisibilityManager {
                 armorStand.isVisible = false
                 armorStand.isMarker = true
                 armorStand.isCustomNameVisible = true
-                armorStand.customName = buildHologramText(target)
+                armorStand.customName(Component.text(buildHologramText(target)))
                 armorStand.setGravity(false)
-                armorStand.setSmall(true)
+                armorStand.isSmall = true
 
                 armorStand.persistentDataContainer.set(hologramKey, PersistentDataType.STRING, "true")
 
@@ -35,7 +38,7 @@ object PlayerVisibilityManager {
                             cancel()
                         } else {
                             armorStand.teleport(target.location.add(0.0, 2.5, 0.0))
-                            armorStand.customName = buildHologramText(target)
+                            armorStand.customName(Component.text(buildHologramText(target)))
                         }
                     }
                 }.runTaskTimer(plugin, 0L, 20L)
@@ -52,22 +55,22 @@ object PlayerVisibilityManager {
     }
 
     private fun isWearingIronmanHelmet(player: Player): Boolean {
-        return hasCustomTag(player.inventory.helmet, "ironman_helmet")
+        return hasIronmanHelmetTag(player.inventory.helmet)
     }
 
     private fun buildHologramText(player: Player): String {
-        val health = "Health: ${player.health}/${player.maxHealth}"
+        val playerName = PlainTextComponentSerializer.plainText().serialize(player.name())
+        val health = "Health: ${player.health}/${player.healthScale}"
         val armor = "Armor: ${player.inventory.armorContents.filterNotNull().joinToString(", ") { it.type.name }}"
         val effects = player.activePotionEffects.joinToString(", ") {
             "${it.type.name} (${it.duration / 20}s)"
         }
 
-        return "${player.name}\n$health\n$armor\n$effects"
+        return "$playerName\n$health\n$armor\n$effects"
     }
 
-    private fun hasCustomTag(item: ItemStack?, tag: String): Boolean {
+    private fun hasIronmanHelmetTag(item: ItemStack?): Boolean {
         val meta = item?.itemMeta
-        val key = NamespacedKey.fromString(tag) ?: return false
-        return meta?.persistentDataContainer?.has(key, PersistentDataType.STRING) == true
+        return meta?.persistentDataContainer?.has(ironmanHelmetTagKey, PersistentDataType.STRING) == true
     }
 }

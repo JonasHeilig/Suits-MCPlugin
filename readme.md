@@ -3,27 +3,29 @@
 
 ## Suits
 ### IronMan Suit
+<img src="pictures/ironman_suit.png">
+
 #### Helmet
-##### Abilities:
+Abilities:
 - Night Vision
-- Player Hologram - Useful Information for the wearing Player about the other Player like Hearth, Armor, etc.
-##### Recipes:
+- Player Hologram - Useful Information for the wearing Player about the other Player like Hearth, Armor, etc. <br>
+Recipes: <br>
 ADDPicture
 #### Chestplate
-##### Abilities:
-- Absorption
-##### Recipes:
+Abilities:
+- Absorption <br>
+Recipes: <br>
 ADDPicture
 #### Leggings
-##### Abilities:
-- Speed
-##### Recipes:
+Abilities:
+- Speed <br>
+Recipes: <br>
 ADDPicture
 #### Boots
-##### Abilities:
+Abilities:
 - Jump Boost
-- Fly
-##### Recipes:
+- Fly <br>
+Recipes: <br>
 ADDPicture
 #### All Parts wearing
 - Fire Resistance
@@ -38,7 +40,8 @@ ADDPicture
 - Jarvis
 - EXO
 - JetEngineCore
-- JetEngine
+- JetEngine <br>
+<img src="pictures/AllItems_5.png">
 
 ## Weapons:
 

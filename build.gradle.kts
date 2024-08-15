@@ -26,15 +26,28 @@ kotlin {
     jvmToolchain(targetJavaVersion)
 }
 
-tasks.build {
-    dependsOn("shadowJar")
-}
+tasks {
+    val shadowJar by getting(com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar::class) {
+        archiveClassifier.set("")
+        mergeServiceFiles()
+        manifest {
+            attributes(
+                "Implementation-Title" to project.name,
+                "Implementation-Version" to project.version
+            )
+        }
+    }
 
-tasks.processResources {
-    val props = mapOf("version" to version)
-    inputs.properties(props)
-    filteringCharset = "UTF-8"
-    filesMatching("paper-plugin.yml") {
-        expand(props)
+    build {
+        dependsOn(shadowJar)
+    }
+
+    processResources {
+        val props = mapOf("version" to version)
+        inputs.properties(props)
+        filteringCharset = "UTF-8"
+        filesMatching("plugin.yml") {
+            expand(props)
+        }
     }
 }

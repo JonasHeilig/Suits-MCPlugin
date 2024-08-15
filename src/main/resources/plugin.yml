@@ -1,0 +1,13 @@
+name: Suits
+version: '1.0-SNAPSHOT'
+main: de.jonasheilig.suits.Suits
+api-version: '1.21'
+commands:
+  get:
+    description: Gives an item to a player
+    usage: /<command> <playername> <item>
+    permission: suitsplugin.getitem
+permissions:
+  suitsplugin.getitem:
+    description: Allows the player to use the get command
+    default: op

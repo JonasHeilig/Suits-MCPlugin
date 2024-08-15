@@ -2,7 +2,8 @@ package de.jonasheilig.suits.commands
 
 import de.jonasheilig.suits.items.*
 import org.bukkit.Bukkit
-import org.bukkit.ChatColor
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
@@ -12,17 +13,17 @@ class GetItemCommand : CommandExecutor {
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         if (sender !is Player) {
-            sender.sendMessage("Only players can use this command.")
+            sender.sendMessage(Component.text("Only players can use this command.").color(NamedTextColor.RED))
             return true
         }
 
         if (!sender.hasPermission("suitsplugin.getitem")) {
-            sender.sendMessage("${ChatColor.RED}You do not have permission to use this command.")
+            sender.sendMessage(Component.text("You do not have permission to use this command.").color(NamedTextColor.RED))
             return true
         }
 
         if (args.size != 2) {
-            sender.sendMessage("${ChatColor.RED}Usage: /get <playername> <item>")
+            sender.sendMessage(Component.text("Usage: /get <playername> <item>").color(NamedTextColor.RED))
             return true
         }
 
@@ -31,7 +32,7 @@ class GetItemCommand : CommandExecutor {
 
         val targetPlayer = Bukkit.getPlayer(targetPlayerName)
         if (targetPlayer == null) {
-            sender.sendMessage("Player not found.")
+            sender.sendMessage(Component.text("Player not found.").color(NamedTextColor.RED))
             return true
         }
 
@@ -46,13 +47,13 @@ class GetItemCommand : CommandExecutor {
             "jet_engine_core" -> JetEngineCore().create()
             "jet_engine" -> JetEngine().create()
             else -> {
-                sender.sendMessage("${ChatColor.RED}Invalid item type.")
+                sender.sendMessage(Component.text("Invalid item type.").color(NamedTextColor.RED))
                 return true
             }
         }
 
         targetPlayer.inventory.addItem(itemStack)
-        sender.sendMessage("${ChatColor.GREEN}Gave ${itemType} to ${targetPlayerName}.")
+        sender.sendMessage(Component.text("Gave $itemType to $targetPlayerName.").color(NamedTextColor.GREEN))
         return true
     }
 }
