@@ -36,6 +36,8 @@ ADDPicture
 ## Items:
 - ARK Reaktor
 - Jarvis
+- EXO
+- JetEngine
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin

@@ -40,8 +40,10 @@ class GetItemCommand : CommandExecutor {
             "ironman_chestplate" -> IronmanChestplate().create()
             "ironman_leggings" -> IronmanLeggings().create()
             "ironman_boots" -> IronmanBoots().create()
-            "ironman_ark_reactor" -> ARKReaktor().create()
-            "ironman_jarvis" -> JARVIS().create()
+            "ark_reactor" -> ARKReaktor().create()
+            "jarvis" -> JARVIS().create()
+            "exo_stick" -> EXO().create()
+            "jet_engine_core" -> JetEngine().create()
             else -> {
                 sender.sendMessage("${ChatColor.RED}Invalid item type.")
                 return true

@@ -24,7 +24,6 @@ class JARVIS() {
 
         val lore = listOf(
             Component.text("A powerful AI assistant", NamedTextColor.GOLD),
-            Component.text("Needs for the Ironman Helmet", NamedTextColor.GREEN),
             Component.text("Used to make the Ironman Helm", NamedTextColor.GREEN),
             Component.text("", NamedTextColor.RED),
             Component.text("-----------------------------", NamedTextColor.GRAY),
