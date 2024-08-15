@@ -40,10 +40,14 @@ ADDPicture
 - Jarvis
 - EXO
 - JetEngineCore
-- JetEngine <br>
+- JetEngine
+- RepulsoCore
+<br>
 <img src="pictures/AllItems_5.png">
 
 ## Weapons:
+### RepulsoTool
+Makes 15 damage and has a 7-second cooldown. <br>
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin

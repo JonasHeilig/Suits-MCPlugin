@@ -31,7 +31,9 @@ class GetItemCommandCompleter : TabCompleter {
                 "jarvis",
                 "exo_stick",
                 "jet_engine_core",
-                "jet_engine"
+                "jet_engine",
+                "repulso_core",
+                "repulso_tool",
                 )
             return items.filter { it.startsWith(args[1], true) }
         }

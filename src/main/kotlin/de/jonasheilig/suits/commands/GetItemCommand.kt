@@ -46,6 +46,8 @@ class GetItemCommand : CommandExecutor {
             "exo_stick" -> EXO().create()
             "jet_engine_core" -> JetEngineCore().create()
             "jet_engine" -> JetEngine().create()
+            "repulso_core" -> RepulsoCore().create()
+            "repulso_tool" -> RepulsoTool().create()
             else -> {
                 sender.sendMessage(Component.text("Invalid item type.").color(NamedTextColor.RED))
                 return true

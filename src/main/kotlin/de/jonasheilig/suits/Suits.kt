@@ -11,6 +11,7 @@ class Suits : JavaPlugin() {
         logger.info("Suits Plugin enabled")
         // Listeners
         server.pluginManager.registerEvents(IronSuitListener(this), this)
+        server.pluginManager.registerEvents(RepulsoToolListener(this), this)
         // Commands
         getCommand("get")?.setExecutor(GetItemCommand())
         getCommand("get")?.tabCompleter = GetItemCommandCompleter()
