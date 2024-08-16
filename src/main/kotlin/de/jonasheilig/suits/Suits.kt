@@ -3,7 +3,7 @@ package de.jonasheilig.suits
 import org.bukkit.plugin.java.JavaPlugin
 import de.jonasheilig.suits.listeners.*
 import de.jonasheilig.suits.commands.*
-import de.jonasheilig.suits.recipes.*
+import de.jonasheilig.suits.recipes.CustomRecipeManager
 
 class Suits : JavaPlugin() {
 
