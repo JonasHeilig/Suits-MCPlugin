@@ -15,5 +15,9 @@ object CustomRecipeManager {
         Bukkit.addRecipe(JetEngineCoreRecipe.createRecipe(plugin))
         Bukkit.addRecipe(JetEngineRecipe.createRecipe(plugin))
         Bukkit.addRecipe(ExoRecipe.createRecipe(plugin))
+        Bukkit.addRecipe(RepulsoCoreRecipe.createRecipe(plugin))
+        Bukkit.addRecipe(LaserCoreRecipe.createRecipe(plugin))
+        Bukkit.addRecipe(RepulsoToolRecipe.createRecipe(plugin))
+        Bukkit.addRecipe(LaserStaffRecipe.createRecipe(plugin))
     }
 }

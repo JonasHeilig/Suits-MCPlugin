@@ -42,12 +42,15 @@ ADDPicture
 - JetEngineCore
 - JetEngine
 - RepulsoCore
+- LaserCore
 <br>
 <img src="pictures/AllItems_5.png">
 
 ## Weapons:
 ### RepulsoTool
 Makes 15 damage and has a 7-second cooldown. <br>
+### LaserTool
+Makes 10 damage and has a 3-second cooldown. <br>
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin
