@@ -51,6 +51,8 @@ ADDPicture
 Makes 15 damage and has a 7-second cooldown. <br>
 ### LaserTool
 Makes 10 damage and has a 3-second cooldown. <br>
+### EnergySnowball
+Makes 5 damage and gives the shoot player levitation <br>
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin

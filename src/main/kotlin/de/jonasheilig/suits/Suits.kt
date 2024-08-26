@@ -12,6 +12,7 @@ class Suits : JavaPlugin() {
         // Listeners
         server.pluginManager.registerEvents(IronSuitListener(this), this)
         server.pluginManager.registerEvents(RepulsoToolListener(this), this)
+        server.pluginManager.registerEvents(EnergySnowballListener(this), this)
         // Commands
         getCommand("get")?.setExecutor(GetItemCommand())
         getCommand("get")?.tabCompleter = GetItemCommandCompleter()
