@@ -53,6 +53,9 @@ Makes 15 damage and has a 7-second cooldown. <br>
 Makes 10 damage and has a 3-second cooldown. <br>
 ### EnergySnowball
 Makes 5 damage and gives the shoot player levitation <br>
+### SuperCarrot
+Gives Regeneration, Resistance and Strength for 10, 60 and 10 seconds. <br>
+But let also the player glow for 25 seconds. <br>
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin
