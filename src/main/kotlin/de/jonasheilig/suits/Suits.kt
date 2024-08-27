@@ -14,6 +14,7 @@ class Suits : JavaPlugin() {
         server.pluginManager.registerEvents(RepulsoToolListener(this), this)
         server.pluginManager.registerEvents(EnergySnowballListener(this), this)
         server.pluginManager.registerEvents(SuperCarrotListener(this), this)
+        server.pluginManager.registerEvents(EnergySwordListener(this), this)
         // Commands
         getCommand("get")?.setExecutor(GetItemCommand())
         getCommand("get")?.tabCompleter = GetItemCommandCompleter()

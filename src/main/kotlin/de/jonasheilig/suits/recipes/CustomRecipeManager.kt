@@ -21,5 +21,6 @@ object CustomRecipeManager {
         Bukkit.addRecipe(LaserStaffRecipe.createRecipe(plugin))
         Bukkit.addRecipe(EnergySnowballRecipe.createRecipe(plugin))
         Bukkit.addRecipe(SuperCarrotRecipe.createRecipe(plugin))
+        Bukkit.addRecipe(EnergySwordRecipe.createRecipe(plugin))
     }
 }

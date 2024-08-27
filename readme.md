@@ -56,6 +56,9 @@ Makes 5 damage and gives the shoot player levitation <br>
 ### SuperCarrot
 Gives Regeneration, Resistance and Strength for 10, 60 and 10 seconds. <br>
 But let also the player glow for 25 seconds. <br>
+### EnergySword
+Has Sharpness 3 and Knockback 2. <br>
+When hittinf a player, the player gets for 5 seconds WEAKNESS, SLOWNESS and POISON <br>
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin

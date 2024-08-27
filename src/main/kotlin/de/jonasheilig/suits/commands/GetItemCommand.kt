@@ -52,6 +52,7 @@ class GetItemCommand : CommandExecutor {
             "laser_staff" -> LaserStaff().create()
             "energy_snowball" -> EnergySnowball().create()
             "super_carrot" -> SuperCarrot().create()
+            "energy_sword" -> EnergySword().create()
             else -> {
                 sender.sendMessage(Component.text("Invalid item type.").color(NamedTextColor.RED))
                 return true

@@ -38,6 +38,7 @@ class GetItemCommandCompleter : TabCompleter {
                 "laser_staff",
                 "energy_snowball",
                 "super_carrot",
+                "energy_sword",
                 )
             return items.filter { it.startsWith(args[1], true) }
         }
