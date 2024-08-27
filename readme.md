@@ -62,3 +62,7 @@ When hittinf a player, the player gets for 5 seconds WEAKNESS, SLOWNESS and POIS
 
 ## Commands
 ``/get <player> <item>`` - Get Custom Items from the Plugin
+
+## Preview Pictures -> More in the pictures Folder
+<img src="pictures/2024-08-27_10.27.47.png">
+<img src="pictures/2024-08-27_10.27.52.png">
