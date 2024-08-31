@@ -15,6 +15,9 @@ class Suits : JavaPlugin() {
         server.pluginManager.registerEvents(EnergySnowballListener(this), this)
         server.pluginManager.registerEvents(SuperCarrotListener(this), this)
         server.pluginManager.registerEvents(EnergySwordListener(this), this)
+        server.pluginManager.registerEvents(FirestickListener(this), this)
+        server.pluginManager.registerEvents(LaserStaffListener(this), this)
+        server.pluginManager.registerEvents(TimeAcceleratorListener(this), this)
         // Commands
         getCommand("get")?.setExecutor(GetItemCommand())
         getCommand("get")?.tabCompleter = GetItemCommandCompleter()

@@ -59,11 +59,11 @@ object PlayerVisibilityManager {
     }
 
     private fun buildHologramText(player: Player): String {
-        val playerName = PlainTextComponentSerializer.plainText().serialize(player.name())
+        val playerName = player.displayName()
         val health = "Health: ${player.health}/${player.healthScale}"
         val armor = "Armor: ${player.inventory.armorContents.filterNotNull().joinToString(", ") { it.type.name }}"
         val effects = player.activePotionEffects.joinToString(", ") {
-            "${it.type.name} (${it.duration / 20}s)"
+            "$playerName (${it.duration / 20}s)"
         }
 
         return "$playerName\n$health\n$armor\n$effects"
