@@ -47,6 +47,8 @@ class GetItemCommandCompleter : TabCompleter {
                 "levitation_orb",
                 "impulse_bomb",
                 "bedport",
+                "miners_tear",
+                "explorers_tear",
                 )
             return items.filter { it.startsWith(args[1], true) }
         }

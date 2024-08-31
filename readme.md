@@ -49,6 +49,8 @@ ADDPicture
 - LightStick
 - PhoenixFeather
 - Last Bed Teleporter
+- Miner's Tear
+- Explorer's Tear
 <br>
 <img src="pictures/AllItems_5.png">
 

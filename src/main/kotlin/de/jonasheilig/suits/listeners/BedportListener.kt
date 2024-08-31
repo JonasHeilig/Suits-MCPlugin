@@ -39,6 +39,6 @@ class BedportListener(private val plugin: JavaPlugin) : Listener {
                 }
             }.runTask(plugin)
         }
-        }
+
     }
 }

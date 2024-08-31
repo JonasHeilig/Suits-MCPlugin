@@ -61,6 +61,8 @@ class GetItemCommand : CommandExecutor {
             "levitation_orb" -> LevitationOrb().create()
             "impulse_bomb" -> ImpulseBomb().create()
             "bedport" -> Bedport().create()
+            "miners_tear" -> MinersTear().create()
+            "explorers_tear" -> ExplorersTear().create()
             else -> {
                 sender.sendMessage(Component.text("Invalid item type.").color(NamedTextColor.RED))
                 return true
