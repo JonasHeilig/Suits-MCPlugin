@@ -47,6 +47,7 @@ ADDPicture
 - TimeAccelerator
 - Firestck
 - LightStick
+- PhoenixFeather
 <br>
 <img src="pictures/AllItems_5.png">
 

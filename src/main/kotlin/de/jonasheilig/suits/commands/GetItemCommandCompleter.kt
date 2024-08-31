@@ -43,6 +43,7 @@ class GetItemCommandCompleter : TabCompleter {
                 "time_accelerator",
                 "tarnstone",
                 "lightning_stick",
+                "phoenix_feather",
                 )
             return items.filter { it.startsWith(args[1], true) }
         }

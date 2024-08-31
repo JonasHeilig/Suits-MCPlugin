@@ -19,6 +19,7 @@ class Suits : JavaPlugin() {
         server.pluginManager.registerEvents(LaserStaffListener(this), this)
         server.pluginManager.registerEvents(TimeAcceleratorListener(this), this)
         server.pluginManager.registerEvents(LightningStickListener(this), this)
+        server.pluginManager.registerEvents(PhoenixFeatherListener(this), this)
         // Commands
         getCommand("get")?.setExecutor(GetItemCommand())
         getCommand("get")?.tabCompleter = GetItemCommandCompleter()
