@@ -48,6 +48,7 @@ ADDPicture
 - Firestck
 - LightStick
 - PhoenixFeather
+- Last Bed Teleporter
 <br>
 <img src="pictures/AllItems_5.png">
 

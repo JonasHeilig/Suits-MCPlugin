@@ -44,6 +44,9 @@ class GetItemCommandCompleter : TabCompleter {
                 "tarnstone",
                 "lightning_stick",
                 "phoenix_feather",
+                "levitation_orb",
+                "impulse_bomb",
+                "bedport",
                 )
             return items.filter { it.startsWith(args[1], true) }
         }
