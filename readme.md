@@ -43,6 +43,10 @@ ADDPicture
 - JetEngine
 - RepulsoCore
 - LaserCore
+- Tarnstone
+- TimeAccelerator
+- Firestck
+- LightStick
 <br>
 <img src="pictures/AllItems_5.png">
 
